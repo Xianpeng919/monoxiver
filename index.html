@@ -385,11 +385,11 @@ pre {
 <script type="text/javascript" src="../js/hidebib.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
     <head>
-        <title> POTTER: Pooling Attention Transformer for Efficient Human Mesh Recovery</title>
+        <title>Monocular 3D Object Detection with Bounding Box Denoising in 3D by Perceiver</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta property="og:description" content="POTTER: Pooling Attention Transformer for Efficient Human Mesh Recovery"/>
+        <meta property="og:description" content="Monocular 3D Object Detection with Bounding Box Denoising in 3D by Perceiver"/>
         <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
-        <meta name="twitter:title" content="POTTER: Pooling Attention Transformer for Efficient Human Mesh Recovery">
+        <meta name="twitter:title" content="Monocular 3D Object Detection with Bounding Box Denoising in 3D by Perceiver">
         <meta name="twitter:description" content="">
         <meta name="twitter:image" content="">
     </head>
@@ -400,24 +400,27 @@ pre {
 <div class="container">
     <div class="paper-title">
     <h1> 
-        POTTER: Pooling Attention Transformer for Efficient Human Mesh Recovery
+        Monocular 3D Object Detection with Bounding Box Denoising in 3D by Perceiver
     </div>
 
     <div id="authors">
         <center>
             <div class="author-row-new">
-                <a href="https://zczcwh.github.io/">Ce Zheng<sup>1</sup></a>,
-                <a href="https://xianpeng919.github.io/">Xianpeng Liu<sup>2</sup></a>,
+                <a href="https://xianpeng919.github.io/">Xianpeng Liu<sup>1</sup></a>,
+                <a href="https://zczcwh.github.io/">Ce Zheng<sup>2</sup></a>,
+                <a href="https://scholar.google.com/citations?user=6_h1y4wAAAAJ&hl=en/">Kelvin Cheng<sup>1</sup></a>,
+                <a href="https://xuenan.net//">Nan Xue<sup>5</sup></a>,
                 <a href="http://maple-lab.net/gqi/">Guo-Jun Qi<sup>3,4</sup></a>,
-                <a href="https://www.crcv.ucf.edu/chenchen/">Chen Chen<sup>1</sup></a>,
+                <a href="https://tfwu.github.io/">Tianfu Wu<sup>1</sup></a>,
             </div>
         </center>
         <center>
         <div class="affiliations">
-            <span><sup>1</sup> Center for Research in Computer Vision, University of Central Florida </span><br/>
-            <span><sup>2</sup> North Carolina State University </span><br/>
+            <span><sup>1</sup> North Carolina State University </span><br/>
+            <span><sup>2</sup> Center for Research in Computer Vision, University of Central Florida </span><br/>
             <span><sup>3</sup> OPPO Seattle Research Center, USA </span>
             <span><sup>4</sup> Westlake University </span><br/>
+            <span><sup>5</sup> Ant Research </span><br/>
         </div>
 
 <!--         <br>*indicates equal contribution. -->
@@ -430,18 +433,18 @@ pre {
 
         <div style="clear: both">
             <div class="paper-btn-parent">
-            <a class="paper-btn" href="https://arxiv.org/pdf/2303.13357.pdf">
+            <a class="paper-btn" href="https://arxiv.org/abs/2304.01289">
                 <span class="material-icons"> description </span> 
                  Paper
             </a>
-            <a class="paper-btn" href="https://github.com/zczcwh/POTTER">
-                <span class="material-icons"> code </span>
+            <a class="paper-btn" href="">
+                <span class="material-icons"> code (TBD) </span>
                 Code
             </a>
-            <a class="paper-btn" href="https://www.youtube.com/watch?v=-O4V-yqJmms">
+<!--             <a class="paper-btn" href="https://www.youtube.com/watch?v=-O4V-yqJmms">
                 <span class="material-icons"> code </span>
                 Video
-            </a>  
+            </a>   -->
         </div>
     </div>
 
@@ -464,7 +467,7 @@ pre {
     <section id="teaser-image">
         <hr>
             <div class="mx-auto">
-                <center><img class="card-img-top" src="materials/potter.gif" style="width:350px"></center>
+                <center><img class="card-img-top" src="materials/monoxiver.gif" style="width:350px"></center>
             </div>
         <hr>
     
@@ -476,16 +479,22 @@ pre {
         <h2>Abstract</h2>
         <div class="flex-row">
             <p>
-                Transformer architectures have achieved SOTA performance on the human mesh recovery (HMR) from monocular images. However, the performance gain has come at the cost of substantial memory and computational overhead. 
-                A lightweight and efficient model to reconstruct accurate human mesh is needed for real-world applications. In this paper, we propose a pure transformer architecture named POoling aTtention TransformER (POTTER) for the HMR task from single images. 
-                Observing that the conventional attention module is memory and computationally expensive, we propose an efficient pooling attention module, which significantly reduces the memory and computational cost without sacrificing performance. 
-                Furthermore, we design a new transformer architecture by integrating a High-Resolution (HR) stream for the HMR task. The high-resolution local and global features from the HR stream can be utilized for recovering more accurate human mesh. 
-                Our POTTER outperforms the SOTA method METRO by only requiring 7% of total parameters and 14% of the Multiply-Accumulate Operations on the Human3.6M and 3DPW datasets.             </p>
+                The main challenge of monocular 3D object detection is the accurate localization of 3D center. 
+                Motivated by a new and strong observation that this challenge can be remedied by a 3D-space local-grid search scheme in an ideal case, 
+                we propose a stage-wise approach, which combines the information flow from 2D-to-3D (3D bounding box proposal generation with a single 2D image) and 3D-to-2D (proposal verification by denoising with 3D-to-2D contexts) in a top-down manner.
+                Specifically, we first obtain initial proposals from off-the-shelf backbone monocular 3D detectors. 
+                Then, we generate a 3D anchor space by local-grid sampling from the initial proposals. 
+                Finally, we perform 3D bounding box denoising at the 3D-to-2D proposal verification stage.
+                To effectively learn discriminative features for denoising highly overlapped proposals, 
+                this paper presents a method of using the Perceiver I/O model to fuse the 3D-to-2D geometric information and the 2D appearance information.
+                With the encoded latent representation of a proposal, the verification head is implemented with a self-attention module. 
+                Our method, named as MonoXiver, is generic and can be easily adapted to any backbone monocular 3D detectors.
+                Experimental results on the well-established KITTI dataset and the challenging large-scale Waymo dataset show that MonoXiver consistently achieves improvement with limited computation overhead.             </p>
         </div>
     </section>
     <section id="method"/>
         <hr>
-        <h2>POTTER</h2>
+        <h2>MonoXiver</h2>
 
             <br><br>
 
