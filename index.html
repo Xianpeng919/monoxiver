@@ -439,7 +439,7 @@ pre {
             </a>
             <a class="paper-btn" href="">
                 <span class="material-icons"> code </span>
-                Code_TBD
+                Code
             </a>
 <!--             <a class="paper-btn" href="https://www.youtube.com/watch?v=-O4V-yqJmms">
                 <span class="material-icons"> code </span>
@@ -447,32 +447,6 @@ pre {
             </a>   -->
         </div>
     </div>
-
-    
-    <!-- <section id="teaser-image">
-        <center>
-            <figure>
-                <video class="centered" width="80%" autoplay loop muted playsinline class="video-background " >
-                    <source src="assets/LION_video_v10.mp4#t=0.001" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </figure>
-
-        </center>
-    </section>
-     -->
-   
-        
-    </section>
-    <section id="teaser-image">
-        <hr>
-            <div class="mx-auto">
-                <center><img class="card-img-top" src="materials/monoxiver.gif" style="width:350px"></center>
-            </div>
-        <hr>
-    
-    
-
     
     <section id="abstract"/>
         <hr>
@@ -495,87 +469,55 @@ pre {
     <section id="method"/>
         <hr>
         <h2>MonoXiver</h2>
-
             <br><br>
-
             <div class="mx-auto">
-<!--                <left><p>The proposed framework that composes a "generator" and an ensemble of "scorers" through iterative consensus enables zero-shot generalization across a variety of multimodal tasks.</p></left>-->
-                <center><img class="card-img-top" src="materials/framework_compare.jpg" style="width:950px"></center>
+                <center><img class="card-img-top" src="materials/monoxiver_pipeline.png" style="width:950px"></center>
             </div>
-
             <br><br><br>
-
-            <!-- <div class="row">
-                    <div class="column4">
-                        <center><img class="card-img-top" src="materials/framework.png" style="width:400px"></center>
-                    </div>
-
-                    <div class="column4">
-                        <video width="400" loop autoplay muted>
-                            <source src="materials/teaser3.mp4" type="video/mp4">
-                        </video>
-                    </div>
-            </div>
- -->
-<!--            <div class="flex-row">-->
-<!--                <div class="mx-auto">-->
-<!--                    <left><p><b>Overview of the proposed unified framework.</b> Dashed lines are omitted for certain tasks. Orange lines represent the components used to refine the generated result.</p></left>-->
-<!--                    <br>-->
-<!--                    <center><img class="card-img-top" src="materials/framework.png" style="width:400px"></center>-->
-
-<!--                    <br><br>-->
-
-<!--                    &lt;!&ndash; <video width="800" loop autoplay muted style="border:1px solid black"> &ndash;&gt;-->
-<!--                    <video width="850" loop autoplay muted controls>-->
-<!--                        <source src="materials/new3-2.mp4" type="video/mp4">-->
-<!--                    </video>-->
-<!--                </div>-->
-
-<!--                <br><br>-->
-<!--                <p><b>Image generation: </b> A pre-trained diffusion model is used as the generator, and multiple scorers, such as CLIP and image classifiers, are used to provide feedback to the generator.</p>-->
-<!--                <p><b>Video question answering: </b> GPT-2 is used as the generator, and a set of CLIP models are used as scorers.</p>-->
-<!--                <p><b>Grade school math: </b> GPT-2 is used as the generator, and a set of question-solution classifiers are used as scorers.</p>-->
-<!--                <p><b>Robot manipulation: </b> MPC+World model is used as the generator, and a pre-trained image segmentation model is used to compute the scores from multiple camera views to select the best action.</p>-->
-
-<!--            </div>-->
     </section>
         
 
     <section id="results">
         <hr>
-        <h2>Results of image classification task </h2>
+        <h2>Results on KITTI Test Set </h2>
             <br><br>
             <div class="mx-auto">
-                <center><img class="card-img-top" src="materials/table_img.jpg" style="width:950px"></center>
+                <center><img class="card-img-top" src="materials/kitti_test_crop.png" style="width:100%"></center>
+            </div>
+            <br><br>
+        <hr>
+
+        <h2>Can MonoXiver Generalize Across Base Detectors? (KITTI Validation Set Results)</h2>
+            <br><br>
+            <div class="mx-auto">
+                <center><img class="card-img-top" src="materials/kitti_val_crop.png" style="width:100%"></center>
             </div>
         <hr>
 
-        <h2>Results of human mesh recovery</h2>
+        <h2>Can MonoXiver Generalize Across Datasets? (Waymo Results)</h2>
             <br><br>
             <div class="mx-auto">
-                <center><img class="card-img-top" src="materials/table_hmr.jpg" style="width:950px"></center>
-                 <br><br>
-                <center><img class="card-img-top" src="materials/MG_PA.jpg" style="width:550px"></center>
+                <center><img class="card-img-top" src="materials/waymo_crop.png" style="width:100%"></center>
             </div>
         <hr>
 
-        <h2>Mesh visualization</h2>
-            <br><br>
-            <div class="mx-auto">
-                <center><p><b>Frame-by-frame reconstruction for the video input</b></p></center>
-                <center><img class="card-img-top" src="materials/supp_vis_video.jpg" style="width:100%"></center>
-            </div>
-            <br><br>
-            <div class="mx-auto">
-                <center><p><b>Qualitative comparison with SOTA method METRO</b></p></center>
-                <center><img class="card-img-top" src="materials/supp_vis_comp.jpg" style="width:100%"></center>
-            </div>
-            <br><br>
-            <div class="mx-auto">
-                <center><p><b>Hand mesh visualization</b></p></center>
-                <center><img class="card-img-top" src="materials/supp_vis_hand.jpg" style="width:100%"></center>
-            </div>
-            <br><br><br>
+        <h2>MonoXiver's Computation Cost</h2>
+        <br><br>
+        <div class="mx-auto">
+            <center><img class="card-img-top" src="materials/cost_crop.png" style="width:100%"></center>
+        </div>
+        <hr>
+
+        <h2>Qualitative Results</h2>
+        <br><br>
+        <div class="mx-auto">
+            <center><img class="card-img-top" src="materials/qual1.png" style="width:100%"></center>
+        </div>
+        <br><br>
+        <div class="mx-auto">
+            <center><img class="card-img-top" src="materials/qual2.png" style="width:100%"></center>
+        </div>
+        <br><br>
         <hr>
 
     </section>
@@ -589,12 +531,12 @@ pre {
     <section id="paper">
         <h2>Bibtex</h2>
         <div class="page-body"><pre id="ad6975be-3353-467d-ae48-6313d767ffa6" class="code"><code>
-            @InProceedings{liu2023monoxiver,
-                title={Monocular 3D Object Detection with Bounding Box Denoising in 3D by Perceiver},
-                author={Liu, Xianpeng and Zheng, Ce and Kelvin Cheng and Nan Xue and Qi, Guo-Jun and Tianfu Wu},
-                booktitle ={2023 IEEE/CVF International Conference on Computer Vision (ICCV)},
-                year={2023}
-            }
+@InProceedings{liu2023monoxiver,
+    title={Monocular 3D Object Detection with Bounding Box Denoising in 3D by Perceiver},
+    author={Liu, Xianpeng and Zheng, Ce and Kelvin Cheng and Nan Xue and Qi, Guo-Jun and Tianfu Wu},
+    booktitle ={2023 IEEE/CVF International Conference on Computer Vision (ICCV)},
+    year={2023}
+}
         </code></pre><p id="1a3aa306-c4b8-4872-8fb0-411495c73d55" class="">
         </p></div>
 
