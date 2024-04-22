@@ -42,7 +42,12 @@ Testing: see [ddd_mmdet_test.sh](./scripts/ddd_mmdet_test.sh)
 
 ## 3. Checkpoints
 
+### 3.1 Pretrained RPN head
 
+|    Model     | Link      |
+| ------- | --------- |
+| MonoCon (3-Class) | [Link](https://github.com/Xianpeng919/monoxiver/releases/download/monoxiver/monocon_pretrained_rpn_3cls.pth) |
+| MonoCon (Car-only) | [Link](https://github.com/Xianpeng919/monoxiver/releases/download/monoxiver/monocon_pretrained_rpn_car.pth) |
 
 ## Contact
 
