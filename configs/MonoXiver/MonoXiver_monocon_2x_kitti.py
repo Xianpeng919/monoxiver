@@ -92,7 +92,7 @@ model = dict(
 
 checkpoint_config = dict(interval=1)
 workflow = [('train', 1)]
-load_from = './ckpts/monocon_pretrained_rpn.pth'
+load_from = './ckpts/monocon_pretrained_rpn_3cls.pth'
 evaluation = dict(interval=1)
 
 log_config = dict(
