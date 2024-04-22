@@ -49,6 +49,11 @@ Testing: see [ddd_mmdet_test.sh](./scripts/ddd_mmdet_test.sh)
 | MonoCon (3-Class) | [Link](https://github.com/Xianpeng919/monoxiver/releases/download/monoxiver/monocon_pretrained_rpn_3cls.pth) |
 | MonoCon (Car-only) | [Link](https://github.com/Xianpeng919/monoxiver/releases/download/monoxiver/monocon_pretrained_rpn_car.pth) |
 
+### 3.2 MonoXiver Checkpoint
+|         | AP40@Easy | AP40@Mod. | AP40@Hard | Link      |
+| ------- | --------- |-----------|-----------|-----|
+| MonoXiver |  29.2027  | 22.54   | 19.53 | [Model](https://github.com/Xianpeng919/monoxiver/releases/download/monoxiver/monoxiver.pth) |
+
 ## Contact
 
 Please feel free to report issues here and/or any related problem to Xianpeng Liu (xliu59~at~ncsu~dot~edu).
