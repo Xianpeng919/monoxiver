@@ -1,0 +1,13 @@
+termcolor
+python-benedict
+pytablewriter
+requests
+tqdm
+einops
+opt_einsum
+pyyaml
+deepspeed
+fvcore
+attrs
+tensorboardX
+torch-fidelity
