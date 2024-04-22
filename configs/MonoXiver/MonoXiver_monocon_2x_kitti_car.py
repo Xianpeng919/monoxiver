@@ -93,7 +93,7 @@ model = dict(
 
 checkpoint_config = dict(interval=1)
 workflow = [('train', 1)]
-load_from = './ckpts/monocon_pretrained_rpn_car_only.pth'
+load_from = './ckpts/monocon_pretrained_rpn_car.pth'
 evaluation = dict(interval=1)
 
 log_config = dict(
